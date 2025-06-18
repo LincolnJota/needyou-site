@@ -13,8 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeedYou – Gestão de Estágios Inteligente</title>
     <!-- Tabler Icons Webfont CDN -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
@@ -50,9 +49,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <span class="gradient-text">O futuro</span> da gestão de estágios chegou.
                     </h1>
                     <p>
-                        Automatize processos, elimine emails e papelada, e simplifique toda a experiência para empresas e
+                        Automatize processos, elimine emails e papelada, e simplifique toda a experiência para empresas
+                        e
                         estagiários.<br>
-                        <b>Reduza custos, economize tempo e deixe a NeedYou cuidar da burocracia para você focar no que realmente importa.</b>
+                        <b>Reduza custos, economize tempo e deixe a NeedYou cuidar da burocracia para você focar no que
+                            realmente importa.</b>
                     </p>
                 </div>
                 <div class="hero-art">
@@ -87,7 +88,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <div>
                                 <h3>Plataforma de Tecnologia</h3>
-                                <p>Transforma processos manuais em fluxos digitais — contratos, avaliações e prazos totalmente automatizados.</p>
+                                <p>Transforma processos manuais em fluxos digitais — contratos, avaliações e prazos
+                                    totalmente automatizados.</p>
                             </div>
                         </div>
                         <div class="pilar">
@@ -96,7 +98,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <div>
                                 <h3>Centro de Operações</h3>
-                                <p>Suporte humano proativo que acompanha sua operação e atua com rapidez e precisão na identificação de desvios.</p>
+                                <p>Suporte humano proativo que acompanha sua operação e atua com rapidez e precisão na
+                                    identificação de desvios.</p>
                             </div>
                         </div>
                     </div>
@@ -114,7 +117,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <i class="ti ti-pig-money"></i>
                         </div>
                         <h3>Redução de Custos</h3>
-                        <p>Economize 60% ou mais em comparação aos custos com agentes de integração e processos internos.</p>
+                        <p>Economize 60% ou mais em comparação aos custos com agentes de integração e processos
+                            internos.</p>
                     </div>
                     <div class="vantagem-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="vantagem-icon">
@@ -142,7 +146,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <i class="ti ti-bell-ringing"></i>
                         </div>
                         <h3>Alertas Inteligentes</h3>
-                        <p>Notificações automáticas e controle total de prazos para que não se perca nenhuma obrigação.</p>
+                        <p>Notificações automáticas e controle total de prazos para que não se perca nenhuma obrigação.
+                        </p>
                     </div>
                     <div class="vantagem-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="vantagem-icon">
@@ -166,7 +171,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                         <h3>Para Empresas</h3>
                         <ul>
-                            <li>Criação e assinatura digital de contratos, aditivos, encerramentos e termos de recesso</li>
+                            <li>Criação e assinatura digital de contratos, aditivos, encerramentos e termos de recesso
+                            </li>
                             <li>Avaliações de estágio totalmente online e personalizáveis</li>
                             <li>Gestão de usuários e permissões com diferentes níveis de acesso</li>
                             <li>Notificações automáticas e controle de prazos em tempo real</li>
@@ -212,7 +218,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <i class="ti ti-shield-off"></i>
                             Erros de Conformidade
                         </h3>
-                        <p>Modelos atualizados e gestão centralizada para que reduzem significativamente os riscos legais.</p>
+                        <p>Modelos atualizados e gestão centralizada para que reduzem significativamente os riscos
+                            legais.</p>
                     </div>
                     <div class="problema-card" data-aos="flip-up" data-aos-delay="200">
                         <h3>
@@ -250,7 +257,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="fluxo-item" data-aos="zoom-in" data-aos-delay="240">
                         <i class="ti ti-user-star"></i>
-                        <p>Nosso time acompanha os estágios e atua em potenciais desvios, auxiliando a garantir a conformidade.</p>
+                        <p>Nosso time acompanha os estágios e atua em potenciais desvios, auxiliando a garantir a
+                            conformidade.</p>
                     </div>
                 </div>
             </div>
@@ -265,8 +273,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="unica-conteudo">
                     <h2>Feita para Empresas. Pensada para Estágios.</h2>
                     <p>
-                        A NeedYou nasceu para preencher uma lacuna no mercado: <b>uma plataforma de estágios feita sob medida para empresas.</b><br>
-                    <p> Aqui, você encontra tecnologia que automatiza processos e simplifica a gestão de ponta a ponta — <b>uma solução feita para quem realmente precisa de resultados.</b>
+                        A NeedYou nasceu para preencher uma lacuna no mercado: <b>uma plataforma de estágios feita sob
+                            medida para empresas.</b><br>
+                    <p> Aqui, você encontra tecnologia que automatiza processos e simplifica a gestão de ponta a ponta —
+                        <b>uma solução feita para quem realmente precisa de resultados.</b>
                     <p>
                     <h3>É gestão de estágios com visão empresarial!</h3>
                     </p>
