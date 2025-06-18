@@ -999,3 +999,30 @@ body::-webkit-scrollbar-track,
         width: 99vw;
     }
 }
+
+body,
+input,
+textarea,
+button,
+select,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+strong,
+em,
+label {
+    -webkit-font-smoothing: antialiased;
+    /* Chrome, Safari, Opera */
+    -moz-osx-font-smoothing: grayscale;
+    /* Firefox */
+    font-smooth: always;
+    /* Padrão genérico */
+    text-rendering: optimizeLegibility;
+    /* Melhora kerning e ligaturas */
+}
