@@ -3,6 +3,7 @@
     --yellow-dark: #d6ae29;
     --black: #0a0a0a;
     --gray: #f5f5f5;
+    --gray-section: #F3F4F8;
     --gray-dark: #232323;
     --white: #fff;
     --glass: rgba(255, 255, 255, 0.67);
@@ -11,8 +12,8 @@
     --shadow-light: 0 2px 12px 0 rgba(254, 202, 23, 0.06);
     --radius: 1.6rem;
     --radius-sm: 1rem;
-    --font-heading: 'Montserrat', 'Carbona', Arial, sans-serif;
-    --font-body: 'Inter', 'Anodina', Arial, sans-serif;
+    --font-heading: 'Poppins', Arial, sans-serif;
+    --font-body: 'Poppins', Arial, sans-serif;
 }
 
 html {
@@ -28,8 +29,78 @@ body {
     min-height: 100vh;
 }
 
+/* ============ ICONES TABLER ============= */
+i.ti {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.1rem;
+    color: var(--yellow-dark);
+    line-height: 1;
+    vertical-align: middle;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-right: 0.65rem;
+    margin-bottom: 0.1rem;
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.18s;
+}
+
+i.ti:last-child {
+    margin-right: 0;
+}
+
+/* Fluxo: ícone de outra cor */
+.fluxo-item i.ti {
+    color: #111;
+    /* Para fundo amarelo, ícone preto. Use #fff se fundo escuro. */
+}
+
+/* Se quiser ícone branco, troque color: #111; por color: #fff; */
+
+.sobre-pilares .pilar-icone,
+.vantagens-grid .vantagem-icon,
+.func-bloco-icone,
+.unica-item .ti {
+    margin-right: 0.65rem;
+    margin-bottom: 0;
+}
+
+.vantagem-icon,
+.pilar-icone,
+.func-bloco-icone,
+.unica-item .ti {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+
+.unica-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 700;
+    font-size: 1.08rem;
+    color: var(--black);
+    background: #fff9e0;
+    border: 1.5px solid var(--yellow);
+    border-radius: 1.2rem;
+    padding: 0.85rem 1.2rem;
+    box-shadow: none;
+}
+
+/* ============ SECTION COLORS ============= */
 .section {
-    padding: 3.5rem 0 3.5rem 0;
+    padding: 4.5rem 0 3.5rem 0;
+}
+
+.section:not(.hero) {
+    padding-top: calc(3.5rem);
 }
 
 .section-yellow {
@@ -42,8 +113,8 @@ body {
 }
 
 .section-gray {
-    background: var(--gray);
-    color: #111;
+    background: var(--gray-section);
+    color: var(--black);
 }
 
 .section-dark {
@@ -56,7 +127,7 @@ body {
     color: #fff;
 }
 
-/* ================= HEADER =================== */
+/* ============== HEADER =================== */
 .container {
     max-width: 1120px;
     margin: 0 auto;
@@ -65,22 +136,14 @@ body {
 }
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
     background: var(--white);
     border-bottom: 1.5px solid #eee;
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.03);
     padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
-
-/* .section:not(.hero) {
-    padding-top: calc(4.5rem + 64px);
-}
-    */
-
 
 .nav-wrapper {
     display: flex;
@@ -93,12 +156,8 @@ header {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-family: var(--font-heading);
-    font-size: 1.42rem;
-    font-weight: 900;
     color: var(--black);
     text-decoration: none;
-    letter-spacing: -1px;
 }
 
 nav {
@@ -124,7 +183,7 @@ nav a.nav-cta {
     color: var(--black);
     margin-left: 0.5rem;
     box-shadow: var(--shadow-light);
-    font-weight: 900;
+    font-weight: 600;
     transition: background 0.2s, box-shadow 0.2s, color 0.2s;
 }
 
@@ -152,7 +211,7 @@ nav a:hover:after {
     display: none;
 }
 
-/* ================= HERO =================== */
+/* ============== HERO =================== */
 .hero {
     min-height: 100vh;
     height: 100vh;
@@ -167,8 +226,8 @@ nav a:hover:after {
 }
 
 .hero-full {
-    min-height: 100vh;
-    height: 100vh;
+    min-height: calc(100vh - 64px);
+    height: calc(100vh - 64px);
 }
 
 .hero-content {
@@ -235,7 +294,7 @@ nav a:hover:after {
     padding: 0.95em 2.2em;
     font-size: 1.14rem;
     font-family: var(--font-heading);
-    font-weight: 800;
+    font-weight: 600;
     text-decoration: none;
     box-shadow: var(--shadow-light);
     transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.13s;
@@ -357,7 +416,7 @@ nav a:hover:after {
     margin-top: 2px;
 }
 
-/* ================= SOBRE =================== */
+/* ============= SOBRE ============== */
 .sobre-grid {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
@@ -413,12 +472,8 @@ nav a:hover:after {
     box-shadow: none;
 }
 
-.pilar-icone img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    display: block;
-    margin-bottom: 0.1rem;
+.pilar-icone i.ti {
+    margin-right: 0.4rem;
 }
 
 .pilar h3 {
@@ -426,7 +481,7 @@ nav a:hover:after {
     font-size: 1.09rem;
     font-family: var(--font-heading);
     color: var(--yellow-dark);
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .pilar p {
@@ -436,7 +491,7 @@ nav a:hover:after {
     font-size: 1.02rem;
 }
 
-/* ================= VANTAGENS =================== */
+/* ============= VANTAGENS ============== */
 .vantagens-grid {
     margin: 3.2rem 0 0 0;
     display: grid;
@@ -457,18 +512,8 @@ nav a:hover:after {
     position: relative;
 }
 
-.vantagem-icon {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-    background: #fff9e0;
-    box-shadow: none;
-    border: 1.5px solid var(--yellow);
+.vantagem-icon i.ti {
+    margin-right: 0.4rem;
 }
 
 .vantagem-card h3 {
@@ -476,7 +521,7 @@ nav a:hover:after {
     font-size: 1.19rem;
     margin-bottom: 0.6rem;
     color: var(--black);
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .vantagem-card p {
@@ -486,7 +531,7 @@ nav a:hover:after {
     font-weight: 500;
 }
 
-/* ================= FUNCIONALIDADES =================== */
+/* ============ FUNCIONALIDADES ============= */
 .funcionalidades-blocos {
     margin-top: 3.2rem;
     display: flex;
@@ -511,11 +556,8 @@ nav a:hover:after {
     align-items: flex-start;
 }
 
-.func-bloco-icone img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    margin-bottom: 0.6rem;
+.func-bloco-icone i.ti {
+    margin-right: 0.4rem;
 }
 
 .func-bloco h3 {
@@ -523,7 +565,7 @@ nav a:hover:after {
     font-size: 1.19rem;
     margin-bottom: 0.8rem;
     font-family: var(--font-heading);
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .func-bloco ul {
@@ -536,7 +578,7 @@ nav a:hover:after {
     font-weight: 500;
 }
 
-/* ================= PROBLEMAS RESOLVIDOS =================== */
+/* ========== PROBLEMAS RESOLVIDOS ========== */
 .problemas-grid {
     margin-top: 2.7rem;
     display: grid;
@@ -556,13 +598,17 @@ nav a:hover:after {
     align-items: flex-start;
 }
 
+.problema-card h3 i.ti {
+    margin-right: 0.4rem;
+}
+
 .problema-card h3 {
     color: var(--yellow-dark);
     font-size: 1.13rem;
     margin-top: 0;
     margin-bottom: 0.7rem;
     font-family: var(--font-heading);
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .problema-card p {
@@ -570,7 +616,7 @@ nav a:hover:after {
     font-weight: 500;
 }
 
-/* ================= FLUXO =================== */
+/* ============== FLUXO ================ */
 .funciona-fluxo {
     margin-top: 2.2rem;
     display: flex;
@@ -580,30 +626,15 @@ nav a:hover:after {
     gap: 1.7rem;
 }
 
+.fluxo-item i.ti {
+    margin-right: 0.3rem;
+}
+
 .fluxo-item {
     flex: 1 1 180px;
     min-width: 140px;
     text-align: center;
     max-width: 220px;
-}
-
-.fluxo-circle {
-    background: #fff;
-    border-radius: 50%;
-    width: 74px;
-    height: 74px;
-    margin: 0 auto 1rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 3px 12px #feca174a;
-    border: 2.5px solid #fff3bc;
-}
-
-.fluxo-circle img {
-    width: 38px;
-    height: 38px;
-    object-fit: contain;
 }
 
 .fluxo-seta {
@@ -614,7 +645,7 @@ nav a:hover:after {
     align-items: center;
 }
 
-/* ================= ÚNICA =================== */
+/* ============== ÚNICA =============== */
 .unica-section {
     background: #fff;
     padding-top: 4.2rem;
@@ -646,11 +677,11 @@ nav a:hover:after {
     font-size: 2rem;
     margin-bottom: 0.9rem;
     font-family: var(--font-heading);
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .unica-conteudo p {
-    font-size: 1.18rem;
+    font-size: 1.0rem;
     color: #222;
     margin-bottom: 1.5rem;
     font-weight: 500;
@@ -662,27 +693,7 @@ nav a:hover:after {
     margin-top: 0.5rem;
 }
 
-.unica-item {
-    background: #fff9e0;
-    border: 1.5px solid var(--yellow);
-    border-radius: 1.2rem;
-    padding: 0.85rem 1.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 90px;
-    font-weight: 700;
-    font-size: 1.08rem;
-    color: var(--black);
-    box-shadow: none;
-}
-
-.unica-icon {
-    font-size: 1.7rem;
-    margin-bottom: 0.4rem;
-}
-
-/* ================= CONTATO =================== */
+/* =========== CONTATO =========== */
 .contato-container {
     display: flex;
     flex-wrap: wrap;
@@ -699,7 +710,7 @@ nav a:hover:after {
 .contato-info h2 {
     font-size: 1.65rem;
     font-family: var(--font-heading);
-    font-weight: 900;
+    font-weight: 700;
     margin-bottom: 0.5rem;
     color: var(--yellow-dark);
 }
@@ -778,7 +789,7 @@ nav a:hover:after {
     font-size: 1.05rem;
 }
 
-/* ================= FOOTER =================== */
+/* ============= FOOTER ============== */
 footer {
     background: #fff;
     border-top: 2.5px solid #f5e9c2;
@@ -794,7 +805,7 @@ footer {
     margin-right: 0.4rem;
 }
 
-/* ================= TEXTO DESTAQUE =================== */
+/* ========== TEXTO DESTAQUE ========== */
 .gradient-text,
 .gradient-text-bold {
     color: var(--yellow);
@@ -802,7 +813,46 @@ footer {
     text-shadow: 0 1px 0 #fff8da, 0 2px 8px #feca1722;
 }
 
-/* =================== RESPONSIVIDADE ==================== */
+/* =========== SCROLLBAR ============ */
+html,
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--yellow) var(--white);
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+    width: 6px;
+    background: var(--white);
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+*::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+    border-radius: 12px;
+    border: 2px solid var(--white);
+    min-height: 24px;
+    transition: background 0.2s;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--yellow-dark);
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+*::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 12px;
+    margin: 4px 0;
+    box-shadow: inset 0 0 4px #feca1740;
+}
+
+/* ========== RESPONSIVIDADE ========== */
 @media (max-width: 950px) {
 
     .hero-content,

@@ -12,9 +12,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeedYou – Gestão de Estágios Inteligente</title>
+    <!-- Tabler Icons Webfont CDN -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <script defer src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -81,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="sobre-pilares">
                         <div class="pilar">
                             <div class="pilar-icone">
-                                <img src="assets/icon-plataforma.png" alt="Plataforma de Tecnologia">
+                                <i class="ti ti-device-desktop"></i>
                             </div>
                             <div>
                                 <h3>Plataforma de Tecnologia</h3>
@@ -90,11 +92,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                         <div class="pilar">
                             <div class="pilar-icone">
-                                <img src="assets/icon-centro.png" alt="Centro de Operações">
+                                <i class="ti ti-users-group"></i>
                             </div>
                             <div>
                                 <h3>Centro de Operações</h3>
-                                <p>Suporte humano proativo que acompanha sua operação e atua com rapidez e precisão na identificação de desvios.
+                                <p>Suporte humano proativo que acompanha sua operação e atua com rapidez e precisão na identificação de desvios.</p>
                             </div>
                         </div>
                     </div>
@@ -109,68 +111,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="vantagens-grid">
                     <div class="vantagem-card" data-aos="fade-up" data-aos-delay="50">
                         <div class="vantagem-icon">
-                            <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="11" stroke="#FECA17" stroke-width="2" />
-                                <path d="M8 13c.39.39 1.02.39 1.41 0L12 10.41l2.59 2.59c.39.39 1.02.39 1.41 0"
-                                    stroke="#111" stroke-width="1.7" stroke-linecap="round" />
-                            </svg>
+                            <i class="ti ti-pig-money"></i>
                         </div>
                         <h3>Redução de Custos</h3>
                         <p>Economize 60% ou mais em comparação aos custos com agentes de integração e processos internos.</p>
                     </div>
                     <div class="vantagem-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="vantagem-icon">
-                            <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-                                <rect x="4" y="4" width="16" height="20" rx="3" fill="#fff" />
-                                <rect x="4" y="4" width="16" height="20" rx="3" stroke="#FECA17" stroke-width="2" />
-                                <path d="M8 10h8M8 14h5" stroke="#111" stroke-width="1.7" stroke-linecap="round" />
-                            </svg>
+                            <i class="ti ti-file-digit"></i>
                         </div>
                         <h3>Zero Papelada</h3>
                         <p>Assinaturas online, sem emails perdidos e sem documentos físicos.</p>
                     </div>
                     <div class="vantagem-card" data-aos="fade-up" data-aos-delay="150">
                         <div class="vantagem-icon">
-                            <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="#FECA17" stroke="#111"
-                                    stroke-width="2" stroke-linejoin="round" />
-                            </svg>
+                            <i class="ti ti-robot"></i>
                         </div>
                         <h3>Automação Completa</h3>
                         <p>Geração automática de contratos, aditivos, avaliações e termos.</p>
                     </div>
                     <div class="vantagem-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="vantagem-icon">
-                            <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-                                <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" fill="#fff" />
-                                <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" stroke="#FECA17"
-                                    stroke-width="2" />
-                                <path d="M8.5 14l3.5-5 3.5 5" stroke="#111" stroke-width="1.7" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+                            <i class="ti ti-shield-check"></i>
                         </div>
                         <h3>Foco em Conformidade</h3>
                         <p>Gestão de processos, prazos e documentos que atendem à Lei de Estágios.</p>
                     </div>
                     <div class="vantagem-card" data-aos="fade-up" data-aos-delay="250">
                         <div class="vantagem-icon">
-                            <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-                                <path d="M12 22a2 2 0 002-2H10a2 2 0 002 2z" fill="#FECA17" />
-                                <path d="M18 16v-5a6 6 0 10-12 0v5l-2 2v1h16v-1l-2-2z" fill="#fff" stroke="#FECA17"
-                                    stroke-width="2" />
-                                <path d="M8 16h8" stroke="#111" stroke-width="1.7" stroke-linecap="round" />
-                            </svg>
+                            <i class="ti ti-bell-ringing"></i>
                         </div>
                         <h3>Alertas Inteligentes</h3>
                         <p>Notificações automáticas e controle total de prazos para que não se perca nenhuma obrigação.</p>
                     </div>
                     <div class="vantagem-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="vantagem-icon">
-                            <svg width="28" height="28" fill="none" viewBox="0 0 24 24">
-                                <path d="M16.5 3.5a2.121 2.121 0 013 3l-12 12-4 1 1-4 12-12z" fill="#FECA17"
-                                    stroke="#111" stroke-width="1.7" />
-                                <path d="M14.5 6.5l3 3" stroke="#111" stroke-width="1.3" stroke-linecap="round" />
-                            </svg>
+                            <i class="ti ti-clipboard-check"></i>
                         </div>
                         <h3>Avaliações Online</h3>
                         <p>Avaliações personalizadas e 100% online.</p>
@@ -186,7 +162,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="funcionalidades-blocos">
                     <div class="func-bloco" data-aos="fade-right">
                         <div class="func-bloco-icone">
-                            <img src="assets/icon-empresa.png" alt="Para Empresas">
+                            <i class="ti ti-building"></i>
                         </div>
                         <h3>Para Empresas</h3>
                         <ul>
@@ -198,7 +174,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div class="func-bloco" data-aos="fade-left">
                         <div class="func-bloco-icone">
-                            <img src="assets/icon-plataforma.png" alt="Para Estagiários">
+                            <i class="ti ti-id-badge-2"></i>
                         </div>
                         <h3>Para Estagiários</h3>
                         <ul>
@@ -219,48 +195,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="problemas-grid">
                     <div class="problema-card" data-aos="flip-up" data-aos-delay="50">
                         <h3>
-                            <svg width="22" height="22" style="vertical-align:middle;margin-bottom:3px;" fill="none"
-                                viewBox="0 0 24 24">
-                                <rect x="4" y="4" width="16" height="16" rx="4" fill="#FECA17" stroke="#111"
-                                    stroke-width="2" />
-                                <path d="M8 12h8" stroke="#111" stroke-width="2" stroke-linecap="round" />
-                            </svg>
+                            <i class="ti ti-file-x"></i>
                             Processos Burocráticos
                         </h3>
                         <p>Assine tudo online e diga adeus à papelada e ao retrabalho.</p>
                     </div>
                     <div class="problema-card" data-aos="flip-up" data-aos-delay="100">
                         <h3>
-                            <svg width="22" height="22" style="vertical-align:middle;margin-bottom:3px;" fill="none"
-                                viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10" stroke="#FECA17" stroke-width="2" />
-                                <path d="M12 8v4l3 3" stroke="#111" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+                            <i class="ti ti-alert-circle"></i>
                             Falta de Controle
                         </h3>
                         <p>Nunca mais perca um prazo: alertas e dashboards cuidam disso por você.</p>
                     </div>
                     <div class="problema-card" data-aos="flip-up" data-aos-delay="150">
                         <h3>
-                            <svg width="22" height="22" style="vertical-align:middle;margin-bottom:3px;" fill="none"
-                                viewBox="0 0 24 24">
-                                <rect x="4" y="4" width="16" height="16" rx="4" fill="#FECA17" stroke="#111"
-                                    stroke-width="2" />
-                                <path d="M9 9l6 6M15 9l-6 6" stroke="#111" stroke-width="2" stroke-linecap="round" />
-                            </svg>
+                            <i class="ti ti-shield-off"></i>
                             Erros de Conformidade
                         </h3>
                         <p>Modelos atualizados e gestão centralizada para que reduzem significativamente os riscos legais.</p>
                     </div>
                     <div class="problema-card" data-aos="flip-up" data-aos-delay="200">
                         <h3>
-                            <svg width="22" height="22" style="vertical-align:middle;margin-bottom:3px;" fill="none"
-                                viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10" stroke="#FECA17" stroke-width="2" />
-                                <path d="M8 16l4-8 4 8" stroke="#111" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </svg>
+                            <i class="ti ti-hourglass"></i>
                             Tempo Gasto
                         </h3>
                         <p>Automatize o operacional e ganhe tempo para o que realmente importa.</p>
@@ -275,9 +231,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h2>Fluxo Simples. Gestão Poderosa.</h2>
                 <div class="funciona-fluxo">
                     <div class="fluxo-item" data-aos="zoom-in" data-aos-delay="80">
-                        <div class="fluxo-circle">
-                            <img src="assets/icon-empresa.png" alt="Empresa">
-                        </div>
+                        <i class="ti ti-file-plus"></i>
                         <p>Cadastre os estágios e inicie a jornada em poucos cliques.</p>
                     </div>
                     <div class="fluxo-seta">
@@ -286,9 +240,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </svg>
                     </div>
                     <div class="fluxo-item" data-aos="zoom-in" data-aos-delay="160">
-                        <div class="fluxo-circle">
-                            <img src="assets/icon-plataforma.png" alt="Plataforma">
-                        </div>
+                        <i class="ti ti-settings-cog"></i>
                         <p>A geração de documentos, assinaturas e prazos é toda automatizada.</p>
                     </div>
                     <div class="fluxo-seta">
@@ -297,9 +249,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </svg>
                     </div>
                     <div class="fluxo-item" data-aos="zoom-in" data-aos-delay="240">
-                        <div class="fluxo-circle">
-                            <img src="assets/icon-centro.png" alt="Centro de Operações">
-                        </div>
+                        <i class="ti ti-user-star"></i>
                         <p>Nosso time acompanha os estágios e atua em potenciais desvios, auxiliando a garantir a conformidade.</p>
                     </div>
                 </div>
@@ -321,20 +271,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h3>É gestão de estágios com visão empresarial!</h3>
                     </p>
                     </p>
-                    <div class="unica-itens">
+                    <!-- <div class="unica-itens">
                         <div class="unica-item">
-                            <span class="unica-icon">🏢</span>
+                            <i class="ti ti-building"></i>
                             <span>Empresas</span>
                         </div>
                         <div class="unica-item">
-                            <span class="unica-icon">🎓</span>
+                            <i class="ti ti-school"></i>
                             <span>Instituições de Ensino</span>
                         </div>
                         <div class="unica-item">
-                            <span class="unica-icon">💡</span>
+                            <i class="ti ti-bulb"></i>
                             <span>Talentos</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
