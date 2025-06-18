@@ -321,14 +321,61 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </section>
     </main>
-    <footer>
-        <div class="container center">
-            <span class="footer-logo">
-                <img src="assets/logo-needyou.png" alt="Logo NeedYou" width="100" height="32" />
-            </span>
-            <p>©
-                <?php echo date('Y'); ?> NeedYou. Todos os direitos reservados.
-            </p>
+    <footer class="footer-ny">
+        <div class="footer-top">
+            <div class="container footer-grid">
+                <div class="footer-col footer-brand">
+                    <img src="assets/logo-needyou-white.png" alt="Logo NeedYou" width="120" height="38" />
+                    <p>Inovação e tecnologia para transformar a gestão de estágios no Brasil.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram" target="_blank"><i class="ti ti-brand-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube" target="_blank"><i class="ti ti-brand-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Sobre</h4>
+                    <ul>
+                        <li><a href="#sobre">Quem Somos</a></li>
+                        <li><a href="#beneficios">Benefícios</a></li>
+                        <li><a href="#funcionalidades">Recursos</a></li>
+                        <li><a href="#como-funciona">Como Funciona</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Ajuda & Tutoriais</h4>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Tutoriais em Vídeo</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Documentação</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Serviço</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="mailto:contato@needyou.com.br"><i class="ti ti-mail"></i>
+                                contato@needyou.com.br</a></li>
+                        <li><a href="tel:+5511999999999"><i class="ti ti-phone"></i> (11) 99999-9999</a></li>
+                        <li><a href="#contato"><i class="ti ti-message-dots"></i> Fale conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <span>©
+                    <?php echo date('Y'); ?> NeedYou. Todos os direitos reservados.
+                </span>
+            </div>
         </div>
     </footer>
     <script>
