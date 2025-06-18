@@ -326,7 +326,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="container footer-grid">
                 <div class="footer-col footer-brand">
                     <img src="assets/logo-needyou-white.png" alt="Logo NeedYou" width="170" />
-                    <p>Inovação e tecnologia para transformar a gestão de estágios no Brasil.</p>
+                    <p style="margin-top: 0px;">Inovação e tecnologia para transformar a gestão de estágios no Brasil.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Instagram" target="_blank"><i class="ti ti-brand-instagram"></i></a>
                         <a href="#" aria-label="LinkedIn" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
