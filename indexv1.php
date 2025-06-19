@@ -1,3 +1,10 @@
+<?php
+$feedback = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    require_once('formContato.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,54 +12,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeedYou – Gestão de Estágios Inteligente</title>
-    <meta name="description"
-        content="Automatize a gestão de estágios, elimine a papelada, reduza custos e desenvolva talentos com a NeedYou. Plataforma inteligente e suporte humano para empresas e instituições de ensino.">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="NeedYou">
-    <meta name="keywords"
-        content="gestão de estágios, estágios, plataforma de estágios, automação, recursos humanos, tecnologia para empresas, assinatura digital, conformidade, redução de custos, suporte humano, NeedYou">
-    <meta property="og:title" content="NeedYou – Gestão de Estágios Inteligente">
-    <meta property="og:description"
-        content="Automatize a gestão de estágios, elimine a papelada, reduza custos e desenvolva talentos com a NeedYou. Plataforma inteligente e suporte humano para empresas e instituições de ensino.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://needyou.com.br/">
-    <meta property="og:site_name" content="NeedYou">
-    <meta property="og:image" content="https://needyou.com.br/assets/logo-needyou.webp">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="NeedYou – Gestão de Estágios Inteligente">
-    <meta name="twitter:description"
-        content="Automatize a gestão de estágios, elimine a papelada, reduza custos e desenvolva talentos com a NeedYou. Plataforma inteligente e suporte humano para empresas e instituições de ensino.">
-    <meta name="twitter:image" content="https://needyou.com.br/assets/logo-needyou.webp">
-    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
-    <link rel="canonical" href="https://needyou.com.br/">
-
-    <!-- Preconnects para performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Tabler Icons Webfont CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
-        as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-    </noscript>
-
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script
-        src="https://www.google.com/recaptcha/api.js?onload=ReCaptchaCallbackV3&render=6Lfdq2YrAAAAADseSGyCiR9Fx9igOVlhWlwQMco2"></script>
     <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 
 <body>
     <header>
         <div class="container nav-wrapper">
             <a href="#" class="brand-logo">
-                <img src="assets/logo-needyou.webp" alt="NeedYou Logo" width="150" height="auto" fetchpriority="high"
-                    decoding="async">
+                <img src="assets/logo-needyou.png" alt="NeedYou Logo" width="120" />
             </a>
             <nav>
                 <a href="#sobre">Quem Somos</a>
@@ -73,23 +46,15 @@
             <div class="container hero-content hero-content-full">
                 <div class="hero-bg-glass hero-bg-glass-full">
                     <h1>
-                        <span class="gradient-text">O futuro </span> da gestão de estágios chegou.
+                        <span class="gradient-text">O futuro</span> da gestão de estágios chegou.
                     </h1>
                     <p>
                         Automatize a gestão de estágios, elimine a papelada e reduza custos.<br>
-                        <b>Com a NeedYou, sua empresa economiza tempo, se livra da burocracia e foca no que realmente
-                            importa: desenvolver talentos e gerar resultados.</b>
+                        <b>Com a NeedYou, sua empresa economiza tempo, se livra da burocracia e foca no que realmente importa: desenvolver talentos e gerar resultados.</b>
                     </p>
-                    <button class="btn btn-cta">AGENDE UMA DEMONSTRAÇÃO</button>
                 </div>
-                <div class="hero-art hero-fade">
-                    <div class="hero-fade-images">
-                        <img src="assets/hero-1.png" alt="Gestão digital 1" class="fade-image active">
-                        <img src="assets/hero-2.png" alt="Gestão digital 2" class="fade-image">
-                        <!-- <img src="assets/hero-3.png" alt="Gestão digital 3" class="fade-image">
-                        <img src="assets/hero-4.png" alt="Gestão digital 4" class="fade-image">
-                        <img src="assets/hero-5.png" alt="Gestão digital 5" class="fade-image"> -->
-                    </div>
+                <div class="hero-art">
+                    <img src="assets/hero-illustration.png" alt="Gestão digital NeedYou" />
                 </div>
             </div>
             <a href="#sobre" class="scroll-down" aria-label="Rolar para baixo">
@@ -103,7 +68,7 @@
         <section id="sobre" class="section section-white" data-aos="fade-up">
             <div class="container sobre-grid">
                 <div class="sobre-visual" data-aos="zoom-in">
-                    <img src="assets/sobre-operations.jpeg" alt="Centro de Operações" />
+                    <img src="assets/sobre-operations.png" alt="Centro de Operações" />
                 </div>
                 <div class="sobre-conteudo">
                     <h2>Quem Somos</h2>
@@ -140,7 +105,7 @@
         </section>
 
         <!-- VANTAGENS -->
-        <section id="beneficios" class="section section-yellow">
+        <section id="beneficios" class="section section-yellow" data-aos="fade-up">
             <div class="container">
                 <h2>O que você ganha com a NeedYou</h2>
                 <div class="vantagens-grid">
@@ -223,9 +188,6 @@
                         </ul>
                     </div>
                 </div>
-                <div style="display: flex; justify-content: center; margin-top: 20px;">
-                    <button class="btn btn-cta">Comece a usar hoje!</button>
-                </div>
             </div>
         </section>
 
@@ -292,7 +254,8 @@
                     </div>
                     <div class="fluxo-item" data-aos="zoom-in" data-aos-delay="240">
                         <i class="ti ti-user-star"></i>
-                        <p>Nosso time acompanha os estágios e auxilia a garantir a conformidade.</p>
+                        <p>Nosso time acompanha os estágios e atua em potenciais desvios, auxiliando a garantir a
+                            conformidade.</p>
                     </div>
                 </div>
             </div>
@@ -315,7 +278,20 @@
                     <h3>É gestão de estágios com visão empresarial!</h3>
                     </p>
                     </p>
-                    <button class="btn btn-cta">Transforme sua gestão hoje mesmo!</button>
+                    <!-- <div class="unica-itens">
+                        <div class="unica-item">
+                            <i class="ti ti-building"></i>
+                            <span>Empresas</span>
+                        </div>
+                        <div class="unica-item">
+                            <i class="ti ti-school"></i>
+                            <span>Instituições de Ensino</span>
+                        </div>
+                        <div class="unica-item">
+                            <i class="ti ti-bulb"></i>
+                            <span>Talentos</span>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -325,36 +301,32 @@
             <div class="container contato-container">
                 <div class="contato-info">
                     <h2>Contato para Instituições de Ensino</h2>
-                    <p>Quer saber como a NeedYou pode apoiar sua Instituição de Ensino?<br><b>Fale conosco!</b></p>
+                    <p>Quer saber como a NeedYou pode apoiar sua instituição?<br><b>Fale conosco!</b></p>
                 </div>
                 <form method="POST" class="form-contato" autocomplete="off">
-
+                    <?php if ($feedback) {
+                        echo "<div class='feedback'>$feedback</div>";
+                    } ?>
                     <div class="form-group">
-                        <input type="text" name="nome" id="nome" required autocomplete="off" placeholder=" " />
-                        <label for="nome">Seu nome</label>
+                        <input type="text" name="nome" placeholder="Seu nome" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="instituicao" id="instituicao" required autocomplete="off"
-                            placeholder=" " />
-                        <label for="instituicao">Nome da Instituição</label>
+                        <input type="email" name="email" placeholder="Seu e-mail institucional" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" id="email" required autocomplete="off" placeholder=" " />
-                        <label for="email">Seu melhor e-mail</label>
+                        <textarea name="mensagem" placeholder="Mensagem" rows="4" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-cta">Enviar</button>
+                    <button type="submit" class="btn btn-cta">Enviar mensagem</button>
                 </form>
             </div>
         </section>
     </main>
-    <!-- FOOTER BONITO E ESTRUTURADO -->
     <footer class="footer-ny">
         <div class="footer-top">
             <div class="container footer-grid">
                 <div class="footer-col footer-brand">
                     <img src="assets/logo-needyou-white.png" alt="Logo NeedYou" width="170" />
-                    <p style="margin-top: 0px;">Inovação e tecnologia para transformar a gestão de estágios no Brasil.
-                    </p>
+                    <p style="margin-top: 0px;">Inovação e tecnologia para transformar a gestão de estágios no Brasil.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Instagram" target="_blank"><i class="ti ti-brand-instagram"></i></a>
                         <a href="#" aria-label="LinkedIn" target="_blank"><i class="ti ti-brand-linkedin"></i></a>
@@ -392,8 +364,8 @@
                     <ul>
                         <li><a href="mailto:contato@needyou.com.br"><i class="ti ti-mail"></i>
                                 contato@needyou.com.br</a></li>
-                        <li><a href="mailto:contato@needyou.com.br"><i class="ti ti-message-dots"></i> Fale conosco</a>
-                        </li>
+                        <li><a href="tel:+5511999999999"><i class="ti ti-phone"></i> (11) 99999-9999</a></li>
+                        <li><a href="#contato"><i class="ti ti-message-dots"></i> Fale conosco</a></li>
                     </ul>
                 </div>
             </div>
@@ -401,64 +373,14 @@
         <div class="footer-bottom">
             <div class="container footer-bottom-content">
                 <span>©
-                    2025 NeedYou. Todos os direitos reservados.
+                    <?php echo date('Y'); ?> NeedYou. Todos os direitos reservados.
                 </span>
             </div>
         </div>
     </footer>
     <script>
-        // Seletor das imagens do carrossel
-        const fadeImages = document.querySelectorAll('.hero-fade-images .fade-image');
-        let fadeIndex = 0;
-        const fadeDelay = 3400; // ms
-        const fadeDuration = 900; // ms, igual ao CSS
-
-        if (fadeImages.length > 1) {
-            setInterval(() => {
-                const prev = fadeImages[fadeIndex];
-                fadeIndex = (fadeIndex + 1) % fadeImages.length;
-                const next = fadeImages[fadeIndex];
-
-                prev.classList.remove('active');
-                next.classList.add('active');
-            }, fadeDelay);
-        }
         AOS.init();
     </script>
-    <dialog id="leadDialog">
-        <form id="leadForm" method="dialog" novalidate autocomplete="off">
-            <h2>Agende uma Demonstração</h2>
-            <div class="form-group">
-                <input type="text" id="lead-nome" name="nome" required autocomplete="name" placeholder=" " />
-                <label for="lead-nome">Seu nome*</label>
-            </div>
-            <div class="form-group">
-                <input type="text" id="lead-empresa" name="empresa" required autocomplete="organization"
-                    placeholder=" " />
-                <label for="lead-empresa">Empresa*</label>
-            </div>
-            <div class="form-group">
-                <input type="text" id="lead-cargo" name="cargo" required placeholder=" " />
-                <label for="lead-cargo">Cargo*</label>
-            </div>
-            <div class="form-group">
-                <input type="email" id="lead-email" name="email" required autocomplete="email" placeholder=" " />
-                <label for="lead-email">E-mail*</label>
-            </div>
-            <div class="form-group">
-                <input type="tel" id="lead-celular" name="celular" required pattern=".{8,}" inputmode="tel"
-                    autocomplete="tel" placeholder=" " />
-                <label for="lead-celular">Celular*</label>
-            </div>
-            <div id="lead-error" style="color: #e74c3c; margin-bottom: 1em; display: none;"></div>
-            <div id="lead-success" style="color: #228c43; margin-bottom: 1em; display: none;"></div>
-            <div style="display: flex; gap: 1rem;">
-                <button type="submit" class="btn">Enviar</button>
-                <button type="button" id="leadClose" class="btn"
-                    style="background:var(--gray);color:var(--black);">Fechar</button>
-            </div>
-        </form>
-    </dialog>
 </body>
 
 </html>

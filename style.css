@@ -22,9 +22,13 @@
     box-sizing: border-box;
 }
 
-html {
+html:not(.instant) {
     scroll-behavior: smooth;
 }
+
+/* html {
+    scroll-behavior: smooth;
+} */
 
 body {
     background: var(--white);

@@ -88,3 +88,12 @@ leadForm.addEventListener('submit', async e => {
     });
 });
 
+
+/* Se carregar com hash, mantenha comportamento instantâneo */
+if (location.hash) document.documentElement.classList.add('instant');
+
+/* Quando o DOM terminar de montar, reativa o smooth */
+window.addEventListener('DOMContentLoaded', () => {
+    // timeout = garante que o primeiro scroll já ocorreu
+    setTimeout(() => document.documentElement.classList.remove('instant'), 0);
+});

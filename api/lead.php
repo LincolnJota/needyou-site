@@ -83,13 +83,12 @@ if ($errorCurl || $httpCode !== 204) {
     exit;
 }
 
-// Enviar email para contato@needyou.com.br e bonito e estiloso com todas as informações.
 // Enviar email para contato@needyou.com.br
 $to = 'contato@needyou.com.br';
 $subject = '📥 Novo contato recebido pelo site - ' . $nome;
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
-$headers .= "From: Formulário NeedYou <no-reply@needyou.com.br>" . "\r\n";
+$headers .= "From: LEAD EMPRESA - NeedYou <no-reply@needyou.com.br>" . "\r\n";
 
 // Estilo básico do e-mail
 $htmlMessage = "
