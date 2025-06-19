@@ -1130,7 +1130,7 @@ body::-webkit-scrollbar-track,
     nav {
         display: none;
         position: absolute;
-        background: var(--glass);
+        background: var(--white);
         top: 56px;
         right: 2vw;
         flex-direction: column;
