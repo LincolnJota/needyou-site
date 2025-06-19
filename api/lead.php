@@ -85,10 +85,14 @@ if ($errorCurl || $httpCode !== 204) {
 
 // Enviar email para contato@needyou.com.br
 $to = 'contato@needyou.com.br';
-$subject = '📥 Novo contato recebido pelo site - ' . $nome;
+$subject = '📥 Novo contato de Empresa - ' . $nome;
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
 $headers .= "From: LEAD EMPRESA - NeedYou <no-reply@needyou.com.br>" . "\r\n";
+$logoURL  = 'https://needyou.com.br/assets/logo-needyou.webp';
+$siteURL  = 'https://needyou.com.br';
+$corMain  = '#feca17';      // amarelo NeedYou
+$corDark  = '#1a1a1a';
 
 // Estilo básico do e-mail
 $htmlMessage = "
