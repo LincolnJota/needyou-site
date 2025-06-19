@@ -472,7 +472,7 @@ if (!empty($_GET['code']) && !empty($_GET['hash'])):
         AOS.init();
     </script>
     <dialog id="leadDialog">
-        <form id="leadForm" method="dialog" novalidate autocomplete="off">
+        <form id="leadForm" method="dialog" novalidate autocomplete>
             <h2>Agende uma Demonstração</h2>
             <div class="form-group">
                 <input type="text" id="lead-nome" name="nome" required autocomplete="name" placeholder=" " />

