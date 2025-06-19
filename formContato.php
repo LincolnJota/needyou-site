@@ -14,7 +14,7 @@ if (!$nome || !$email || !$instituicao) {
  * ----------------------------------------*/
 $to       = 'contato@needyou.com.br';
 $subject  = "📥 Novo contato de Instituição – $instituicao";
-$logoURL  = 'https://needyou.com.br/assets/logo-needyou.webp';
+$logoURL  = 'https://needyou.com.br/assets/needyou-mail.png';
 $siteURL  = 'https://needyou.com.br';
 $corMain  = '#feca17';      // amarelo NeedYou
 $corDark  = '#1a1a1a';

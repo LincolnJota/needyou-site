@@ -89,7 +89,7 @@ $subject = '📥 Novo contato de Empresa - ' . $nome;
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
 $headers .= "From: LEAD EMPRESA - NeedYou <no-reply@needyou.com.br>" . "\r\n";
-$logoURL  = 'https://needyou.com.br/assets/logo-needyou.webp';
+$logoURL  = 'https://needyou.com.br/assets/needyou-mail.png';
 $siteURL  = 'https://needyou.com.br';
 $corMain  = '#feca17';      // amarelo NeedYou
 $corDark  = '#1a1a1a';
