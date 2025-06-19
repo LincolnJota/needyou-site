@@ -650,7 +650,7 @@ nav a:hover:after {
 }
 
 .unica-grafico img {
-    max-width: 230px;
+    max-width: 300px;
     width: 100%;
     height: auto;
     display: block;
@@ -1279,6 +1279,7 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 3rem;
 }
 
 .hero-fade-images {
