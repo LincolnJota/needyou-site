@@ -92,20 +92,41 @@ $headers .= "From: LEAD EMPRESA - NeedYou <no-reply@needyou.com.br>" . "\r\n";
 
 // Estilo básico do e-mail
 $htmlMessage = "
-    <html>
-    <head>
-        <style>
-            body { font-family: Arial, sans-serif; color: #333; }
-            h2 { color: #f1c40f; }
-            table { border-collapse: collapse; width: 100%; max-width: 600px; margin: 20px 0; }
-            td { padding: 8px 12px; border: 1px solid #ddd; }
-            tr:nth-child(even) { background-color: #f9f9f9; }
-        </style>
-    </head>
-    <body>
-        <h2>📥 Novo lead recebido</h2>
-        <table>
-            <tr><td><strong>Nome:</strong></td><td>{$nome}</td></tr>
+<!DOCTYPE html>
+<html lang=\"pt-br\">
+<head>
+<meta charset=\"UTF-8\">
+<title>NeedYou – Novo Contato</title>
+<style>
+    body   { margin:0; padding:0; background:#f5f5f5; font-family:'Poppins', Arial, sans-serif; color:#333; }
+    h2     { margin:0 0 12px 0; font-size:22px; color:{$corDark}; }
+    table  { border-collapse:collapse; width:100%; max-width:600px; margin:20px auto; }
+    td     { padding:8px 12px; border:1px solid #ddd; }
+    tr:nth-child(even) { background-color:#f9f9f9; }
+    .wrapper { background:#ffffff; border-radius:8px; overflow:hidden; }
+    .header  { background:{$corMain}; padding:24px; text-align:center; }
+</style>
+</head>
+<body>
+  <table class=\"wrapper\" role=\"presentation\">
+    <!-- Cabeçalho -->
+    <tr>
+      <td class=\"header\">
+        <img src=\"{$logoURL}\" alt=\"NeedYou\" width=\"140\" style=\"display:block;border:0;\">
+      </td>
+    </tr>
+
+    <!-- Conteúdo -->
+    <tr>
+      <td style=\"padding:32px 40px;\">
+        <h2>📥 Novo lead de Empresa</h2>
+        <p style=\"margin:0 0 24px 0;font-size:16px;line-height:1.5;\">
+          Você recebeu um novo contato via formulário do site.<br>
+          <strong>Confira os detalhes abaixo:</strong>
+        </p>
+
+        <table role=\"presentation\">
+          <tr><td><strong>Nome:</strong></td><td>{$nome}</td></tr>
             <tr><td><strong>Empresa:</strong></td><td>{$empresa}</td></tr>
             <tr><td><strong>Cargo:</strong></td><td>{$cargo}</td></tr>
             <tr><td><strong>E-mail:</strong></td><td>{$email}</td></tr>
@@ -113,8 +134,11 @@ $htmlMessage = "
             <tr><td><strong>IP:</strong></td><td>{$ip}</td></tr>
             <tr><td><strong>Recebido em:</strong></td><td>" . date('d/m/Y H:i:s') . "</td></tr>
         </table>
-    </body>
-    </html>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
 ";
 
 // Enviar o e-mail
