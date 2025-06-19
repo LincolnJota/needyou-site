@@ -35,7 +35,7 @@ i.ti {
     align-items: center;
     justify-content: center;
     font-size: 2.1rem;
-    color: var(--yellow-dark);
+    color: var(--yellow);
     line-height: 1;
     vertical-align: middle;
     background: none !important;
@@ -259,7 +259,7 @@ nav a:hover:after {
     margin-right: 0;
     position: relative;
     z-index: 1;
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(0.5px);
 }
 
 .hero-bg-glass-full {
@@ -298,32 +298,21 @@ nav a:hover:after {
     font-weight: 600;
     text-decoration: none;
     box-shadow: var(--shadow-light);
-    transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.13s;
+    transition: transform 0.2s ease, filter 0.2s ease;
     cursor: pointer;
     position: relative;
     overflow: hidden;
 }
 
-.btn.btn-cta {
-    background: var(--yellow);
-    color: var(--black);
-}
-
-.btn.btn-cta:hover {
-    background: #ffd84d;
-    color: var(--black);
-    box-shadow: 0 6px 22px 0 rgba(254, 202, 23, 0.22);
-    transform: translateY(-2px) scale(1.04);
-}
 
 .btn:hover {
     filter: brightness(1.08);
-    transform: scale(1.04);
+    transform: scale(1.05);
 }
 
 /* HERO IMAGEM */
 .hero-art img {
-    max-width: 420px;
+    /* max-width: 420px; */
     width: 100%;
     height: auto;
     display: block;
@@ -426,7 +415,7 @@ nav a:hover:after {
 }
 
 .sobre-visual img {
-    max-width: 320px;
+    max-width: 500px;
     width: 100%;
     height: auto;
     display: block;
@@ -462,7 +451,7 @@ nav a:hover:after {
 }
 
 .pilar {
-    background: #fff9e0;
+    background: #fff9e036;
     border: 1.5px solid var(--yellow);
     border-radius: var(--radius-sm);
     padding: 1.2rem 1.1rem 1.1rem 1rem;
@@ -481,7 +470,7 @@ nav a:hover:after {
     margin: 0 0 0.25rem 0;
     font-size: 1.09rem;
     font-family: var(--font-heading);
-    color: var(--yellow-dark);
+    color: var(--black);
     font-weight: 600;
 }
 
@@ -562,7 +551,7 @@ nav a:hover:after {
 }
 
 .func-bloco h3 {
-    color: var(--yellow-dark);
+    color: var(--black);
     font-size: 1.19rem;
     margin-bottom: 0.8rem;
     font-family: var(--font-heading);
@@ -604,7 +593,7 @@ nav a:hover:after {
 }
 
 .problema-card h3 {
-    color: var(--yellow-dark);
+    color: var(--black);
     font-size: 1.13rem;
     margin-top: 0;
     margin-bottom: 0.7rem;
@@ -622,7 +611,7 @@ nav a:hover:after {
     margin-top: 2.2rem;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     gap: 1.7rem;
 }
@@ -635,7 +624,7 @@ nav a:hover:after {
     flex: 1 1 180px;
     min-width: 140px;
     text-align: center;
-    max-width: 220px;
+    max-width: 400px;
 }
 
 .fluxo-seta {
@@ -682,7 +671,7 @@ nav a:hover:after {
 }
 
 .unica-conteudo p {
-    font-size: 1.0rem;
+    font-size: 1.2rem;
     color: #222;
     margin-bottom: 1.5rem;
     font-weight: 500;
@@ -695,99 +684,139 @@ nav a:hover:after {
 }
 
 /* =========== CONTATO =========== */
+.section-gray {
+    background: #ffffef;
+    padding: 4rem 0;
+}
+
 .contato-container {
     display: flex;
     flex-wrap: wrap;
+    gap: 3rem;
     align-items: flex-start;
-    gap: 2.6rem;
     justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 3rem 2rem;
 }
 
 .contato-info {
-    min-width: 250px;
-    flex: 1;
-}
-
-.contato-info h2 {
-    font-size: 1.65rem;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: var(--yellow-dark);
-}
-
-.contato-info p {
-    color: #222;
-    font-weight: 500;
-    font-size: 1.09rem;
-    margin-bottom: 0.3rem;
+    flex: 1 1 260px;
+    min-width: 220px;
+    max-width: 340px;
+    margin-right: 2rem;
 }
 
 .form-contato {
-    background: #fff;
-    border-radius: var(--radius-sm);
-    border: 1.5px solid #ffe17c;
-    box-shadow: none;
-    padding: 2.2rem 2rem 1.7rem 2rem;
-    max-width: 370px;
-    min-width: 270px;
-    margin: 0 auto;
+    flex: 1 1 410px;
+    min-width: 280px;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 1.1rem;
+    gap: 1.8rem;
 }
 
 .form-group {
-    margin-bottom: 0.6rem;
+    position: relative;
+    margin-bottom: 0;
 }
 
-.form-contato input,
-.form-contato textarea {
-    border: 1.5px solid #ffe17c;
+.form-group input {
+    width: 91%;
+    padding: 1.3rem 1.1rem 1.3rem 1.1rem;
+    border: 1.5px solid var(--gray-dark);
     border-radius: var(--radius-sm);
-    padding: 0.95rem;
-    font-size: 1.13rem;
-    background: #fff;
+    background: var(--gray);
+    font-size: 1.09rem;
     font-family: var(--font-body);
+    color: var(--black);
     outline: none;
-    transition: border 0.19s;
-    width: 100%;
-    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.form-contato input:focus,
-.form-contato textarea:focus {
-    border: 2px solid var(--yellow-dark);
+.form-group input:focus {
+    border-color: var(--yellow);
+    background: var(--white);
+    box-shadow: 0 0 0 2px var(--yellow-dark)22;
 }
 
-.form-contato button {
-    background: var(--yellow);
-    color: #111;
+.form-group label {
+    position: absolute;
+    left: 1.25rem;
+    top: 1.15rem;
+    background: transparent;
+    color: var(--gray-dark);
+    font-size: 1rem;
+    pointer-events: none;
+    font-family: var(--font-body);
+    transition:
+        all 0.18s cubic-bezier(.6, 0, .4, 1);
+    padding: 0 0.2em;
+}
+
+/* Labels flutuantes */
+.form-group input:focus+label,
+.form-group input:not(:placeholder-shown)+label {
+    top: -0.75rem;
+    left: 0.95rem;
+    font-size: 0.93rem;
+    background: var(--white);
+    color: var(--yellow-dark);
+    padding: 0 0.5em;
+    border-radius: 0.3em;
+    box-shadow: 0 1px 5px 0 var(--shadow-light);
+}
+
+.btn.btn-cta {
+    display: inline-block;
     border: none;
-    padding: 0.95em 2em;
-    border-radius: var(--radius-sm);
-    font-size: 1.07rem;
-    font-family: var(--font-heading);
+    color: var(--black);
+    padding: 1.1rem 2.2rem;
+    font-size: 1.15rem;
+    border-radius: 0.7rem;
     font-weight: bold;
+    letter-spacing: 0.02em;
     cursor: pointer;
-    transition: background 0.17s, color 0.15s;
-    box-shadow: 0 3px 14px 0 #FECA1740;
+    font-family: var(--font-heading);
+    transition: background 0.22s, box-shadow 0.15s;
+    box-shadow: var(--shadow-light);
+    min-width: 160px;
+    /* opcional, para garantir largura mínima */
 }
 
-.form-contato button:hover {
-    background: #ffd84d;
-    color: #111;
+.btn.btn-cta:hover,
+.btn.btn-cta:focus {
+    box-shadow: 0 6px 18px 0 var(--shadow-light);
 }
 
 .feedback {
-    color: #14b614;
-    background: #eaffea;
-    border: 1.5px solid #b1e2b1;
-    padding: 1rem 0.7rem;
-    border-radius: 9px;
-    margin-bottom: 1.3rem;
-    font-weight: 700;
-    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    color: #228c43;
+    background: #e5fbe7;
+    border: 1px solid #a1e7b0;
+    border-radius: 0.6rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 800px) {
+    .contato-container {
+        flex-direction: column;
+        padding: 2.3rem 1.1rem;
+    }
+
+    .contato-info {
+        margin-right: 0;
+        margin-bottom: 1.7rem;
+        max-width: 100%;
+    }
+
+    .form-contato {
+        max-width: 100%;
+    }
 }
 
 /* ============= FOOTER ============== */
@@ -1224,4 +1253,83 @@ label {
     -moz-osx-font-smoothing: grayscale;
     font-smooth: always;
     text-rendering: optimizeLegibility;
+}
+
+.hero-content.hero-content-full {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-bg-glass.hero-bg-glass-full {
+    /* seu estilo de texto */
+    flex: 1 1 340px;
+    min-width: 300px;
+    max-width: 1200px;
+}
+
+.hero-art.hero-fade {
+    flex: 1 1 500px;
+    min-width: 340px;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-fade-images {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    /* Garante proporção da imagem */
+    max-width: 700px;
+    background: #fafbfc;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.20);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fade-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* <-- ESSENCIAL: sempre mostra a imagem inteira! */
+    object-position: center;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s cubic-bezier(.6, 0, .4, 1);
+    background: transparent;
+}
+
+.fade-image.active {
+    opacity: 1;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+@media (max-width: 950px) {
+    .hero-content.hero-content-full {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero-bg-glass.hero-bg-glass-full,
+    .hero-art.hero-fade {
+        max-width: 99vw;
+        min-width: unset;
+    }
+
+    .hero-fade-images {
+        max-width: 99vw;
+    }
 }
