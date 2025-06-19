@@ -2,6 +2,7 @@
 $nome = htmlspecialchars($_POST['nome'] ?? '');
 $email = htmlspecialchars($_POST['email'] ?? '');
 $instituicao = htmlspecialchars($_POST['instituicao'] ?? '');
+$code = htmlspecialchars($_POST['code'] ?? 'Não Informado');
 $ip = $_SERVER['REMOTE_ADDR'] ?? '';
 
 if (!$nome || !$email || !$instituicao) {
@@ -64,6 +65,7 @@ $body = "
           <tr><td><strong>Instituição:</strong></td><td>{$instituicao}</td></tr>
           <tr><td><strong>Recebido em:</strong></td><td>{$data}</td></tr>
           <tr><td><strong>IP:</strong></td><td>{$ip}</td></tr>
+            <tr><td><strong>Código:</strong></td><td>{$code}</td></tr>
         </table>
       </td>
     </tr>

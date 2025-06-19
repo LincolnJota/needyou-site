@@ -55,7 +55,8 @@ leadForm.addEventListener('submit', async e => {
         empresa: leadForm['empresa'].value.trim(),
         cargo: leadForm['cargo'].value.trim(),
         email: leadForm['email'].value.trim(),
-        celular: leadForm['celular'].value.trim()
+        celular: leadForm['celular'].value.trim(),
+        code: leadForm['codigo'].value.trim()
     };
 
     for (const key in data) {

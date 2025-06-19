@@ -22,6 +22,7 @@ $empresa = $body['empresa'] ?? '';
 $cargo = $body['cargo'] ?? '';
 $email = $body['email'] ?? '';
 $celular = $body['celular'] ?? '';
+$codigo = $body['codigo'] ?? 'Não Informado'; // código opcional, se não tiver, informar 'Não Informado'
 $ip = $_SERVER['REMOTE_ADDR'] ?? '';
 
 // nome de outro local
@@ -136,6 +137,7 @@ $htmlMessage = "
             <tr><td><strong>E-mail:</strong></td><td>{$email}</td></tr>
             <tr><td><strong>Celular:</strong></td><td>{$celular}</td></tr>
             <tr><td><strong>IP:</strong></td><td>{$ip}</td></tr>
+            <tr><td><strong>Código:</strong></td><td>{$codigo}</td></tr>
             <tr><td><strong>Recebido em:</strong></td><td>" . date('d/m/Y H:i:s') . "</td></tr>
         </table>
       </td>

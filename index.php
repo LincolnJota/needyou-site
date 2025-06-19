@@ -4,6 +4,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_once('formContato.php');
 }
 ?>
+
+<?php
+if (!empty($_GET['code']) && !empty($_GET['hash'])):
+    // Decodifica base64 e faz a sanitização para HTML
+    $code = htmlspecialchars($_GET['code']);
+    $hash = htmlspecialchars(base64_decode($_GET['hash']));
+?>
+    <div id="simulador-codigo-bar" role="banner" aria-label="Aviso personalizado" tabindex="0">
+        <div class="simulador-codigo-content">
+            <span id="simulador-codigo-titulo"><?= $hash ?></span>
+            <button class="btn btn-cta" id="simulador-codigo-cta" type="button">
+                Quero saber mais!
+            </button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('simulador-bar-open');
+            const ctaBtn = document.getElementById('simulador-codigo-cta');
+            if (ctaBtn && window.leadDialog && window.leadDialog.showModal) {
+                ctaBtn.addEventListener('click', function() {
+                    leadForm.reset();
+                    leadError.style.display = 'none';
+                    leadSuccess.style.display = 'none';
+                    if (window.grecaptcha) grecaptcha.reset();
+                    leadDialog.showModal();
+                });
+            } else if (ctaBtn) {
+                ctaBtn.addEventListener('click', function() {
+                    const dlg = document.getElementById('leadDialog');
+                    if (dlg && dlg.showModal) dlg.showModal();
+                });
+            }
+        });
+    </script>
+<?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -66,7 +103,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <a href="#funcionalidades">Recursos</a>
                 <a href="#como-funciona">Como Funciona</a>
                 <a href="#unica">Porque Somos Únicos</a>
-                <a href="#contato" class="nav-cta">Contato</a>
+                <a href="#contato" class="nav-cta btn-cta">Contato</a>
             </nav>
             <div class="menu-btn" id="menuBtn">
                 <span></span><span></span><span></span>
@@ -75,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </header>
     <main>
         <!-- HERO -->
-        <section class="hero hero-full" data-aos="fade">
+        <section class="hero hero-full section-white" data-aos="fade">
             <div class="container hero-content hero-content-full">
                 <div class="hero-bg-glass hero-bg-glass-full">
                     <h1>
@@ -350,6 +387,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input type="email" name="email" id="email" required autocomplete="off" placeholder=" " />
                         <label for="email">Seu melhor e-mail</label>
                     </div>
+                    <input type="hidden" name="codigo" id="codigo" value="<?= htmlspecialchars($_GET['code'] ?? '') ?>" />
                     <button type="submit" class="btn">Enviar</button>
                 </form>
             </div>
@@ -458,6 +496,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     autocomplete="tel" placeholder=" " />
                 <label for="lead-celular">Celular*</label>
             </div>
+            <input type="hidden" name="codigo" id="lead-code" value="<?= htmlspecialchars($_GET['code'] ?? '') ?>">
             <div id="lead-error" style="color: #e74c3c; margin-bottom: 1em; display: none;"></div>
             <div id="lead-success" style="color: #228c43; margin-bottom: 1em; display: none;"></div>
             <div style="display: flex; gap: 1rem;">
