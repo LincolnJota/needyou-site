@@ -5,6 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeedYou – Gestão de Estágios Inteligente</title>
+    <meta name="description"
+        content="Automatize a gestão de estágios, elimine a papelada, reduza custos e desenvolva talentos com a NeedYou. Plataforma inteligente e suporte humano para empresas e instituições de ensino.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="NeedYou">
+    <meta name="keywords"
+        content="gestão de estágios, estágios, plataforma de estágios, automação, recursos humanos, tecnologia para empresas, assinatura digital, conformidade, redução de custos, suporte humano, NeedYou">
+    <meta property="og:title" content="NeedYou – Gestão de Estágios Inteligente">
+    <meta property="og:description"
+        content="Automatize a gestão de estágios, elimine a papelada, reduza custos e desenvolva talentos com a NeedYou. Plataforma inteligente e suporte humano para empresas e instituições de ensino.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://needyou.com.br/">
+    <meta property="og:site_name" content="NeedYou">
+    <meta property="og:image" content="https://needyou.com.br/assets/logo-needyou.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NeedYou – Gestão de Estágios Inteligente">
+    <meta name="twitter:description"
+        content="Automatize a gestão de estágios, elimine a papelada, reduza custos e desenvolva talentos com a NeedYou. Plataforma inteligente e suporte humano para empresas e instituições de ensino.">
+    <meta name="twitter:image" content="https://needyou.com.br/assets/logo-needyou.webp">
+    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32">
+    <link rel="canonical" href="https://needyou.com.br/">
+
+    <!-- Preconnects para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Tabler Icons Webfont CDN -->
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -17,8 +41,10 @@
             href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
     </noscript>
 
-    <script defer src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script
+        src="https://www.google.com/recaptcha/api.js?onload=ReCaptchaCallbackV3&render=6Lfdq2YrAAAAADseSGyCiR9Fx9igOVlhWlwQMco2"></script>
+    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -366,8 +392,8 @@
                     <ul>
                         <li><a href="mailto:contato@needyou.com.br"><i class="ti ti-mail"></i>
                                 contato@needyou.com.br</a></li>
-                        <li><a href="tel:+5511999999999"><i class="ti ti-phone"></i> (11) 99999-9999</a></li>
-                        <li><a href="#contato"><i class="ti ti-message-dots"></i> Fale conosco</a></li>
+                        <li><a href="mailto:contato@needyou.com.br"><i class="ti ti-message-dots"></i> Fale conosco</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -399,6 +425,40 @@
         }
         AOS.init();
     </script>
+    <dialog id="leadDialog">
+        <form id="leadForm" method="dialog" novalidate autocomplete="off">
+            <h2>Agende uma Demonstração</h2>
+            <div class="form-group">
+                <input type="text" id="lead-nome" name="nome" required autocomplete="name" placeholder=" " />
+                <label for="lead-nome">Seu nome*</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="lead-empresa" name="empresa" required autocomplete="organization"
+                    placeholder=" " />
+                <label for="lead-empresa">Empresa*</label>
+            </div>
+            <div class="form-group">
+                <input type="text" id="lead-cargo" name="cargo" required placeholder=" " />
+                <label for="lead-cargo">Cargo*</label>
+            </div>
+            <div class="form-group">
+                <input type="email" id="lead-email" name="email" required autocomplete="email" placeholder=" " />
+                <label for="lead-email">E-mail*</label>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="lead-celular" name="celular" required pattern=".{8,}" inputmode="tel"
+                    autocomplete="tel" placeholder=" " />
+                <label for="lead-celular">Celular*</label>
+            </div>
+            <div id="lead-error" style="color: #e74c3c; margin-bottom: 1em; display: none;"></div>
+            <div id="lead-success" style="color: #228c43; margin-bottom: 1em; display: none;"></div>
+            <div style="display: flex; gap: 1rem;">
+                <button type="submit" class="btn">Enviar</button>
+                <button type="button" id="leadClose" class="btn"
+                    style="background:var(--gray);color:var(--black);">Fechar</button>
+            </div>
+        </form>
+    </dialog>
 </body>
 
 </html>

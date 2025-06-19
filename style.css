@@ -1272,3 +1272,108 @@ body::-webkit-scrollbar-track,
         display: none;
     }
 }
+
+dialog#leadDialog {
+    border: none;
+    border-radius: 1rem;
+    padding: 2.5rem 2rem 2rem 2rem;
+    max-width: 410px;
+    width: 92vw;
+    box-shadow: 0 12px 40px 0 #00000022;
+    background: #fff;
+    animation: dialogIn .2s cubic-bezier(.6, 0, .4, 1);
+    z-index: 9999;
+}
+
+@keyframes dialogIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+dialog#leadDialog::backdrop {
+    background: #0007;
+    backdrop-filter: blur(2px);
+}
+
+#leadDialog h2 {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    color: var(--yellow-dark, #d6ae29);
+    text-align: center;
+}
+
+#leadDialog .form-group {
+    margin-bottom: 1.1rem;
+}
+
+#leadDialog label {
+    display: block;
+    margin-bottom: 0.25em;
+    font-weight: 600;
+    color: #222;
+}
+
+#leadDialog input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1.5px solid #ddd;
+    border-radius: 0.5em;
+    margin-bottom: 0.1rem;
+}
+
+#leadDialog input:invalid {
+    border-color: #e74c3c;
+}
+
+#leadDialog .btn {
+    flex: 1;
+    margin: 0;
+}
+
+#leadDialog .form-group {
+    position: relative;
+    margin-bottom: 1.1rem;
+}
+
+#leadDialog label {
+    position: absolute;
+    left: 0.9rem;
+    top: 0.8rem;
+    background: transparent;
+    color: #888;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.17s cubic-bezier(.6, 0, .4, 1);
+    padding: 0 0.2em;
+    z-index: 2;
+}
+
+#leadDialog input {
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    font-size: 1rem;
+    border: 1.5px solid #ddd;
+    border-radius: 0.5em;
+    margin-bottom: 0.1rem;
+    background: #fff;
+}
+
+#leadDialog input:focus+label,
+#leadDialog input:not(:placeholder-shown)+label {
+    top: -0.95rem;
+    left: 0.75rem;
+    font-size: 0.87rem;
+    background: #fff;
+    color: var(--yellow-dark, #d6ae29);
+    padding: 0 0.5em;
+    border-radius: 0.3em;
+    box-shadow: 0 1px 5px 0 #feca1722;
+}
